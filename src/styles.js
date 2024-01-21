@@ -93,13 +93,49 @@ export const Button = styled.button`
     }
 `
 
-export const User = styled.li`
-    color: #EEE;
-    font-family: Roboto;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.3rem;
-    letter-spacing: -0.408px;
-    margin-left: 1.5rem;
+export const Order = styled.li`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-top: 1rem;
+
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 21rem;
+    padding: 1rem;
+    /*height: 3.5rem;*/
+
+    border: none;
+    outline: none;
+
+    p {
+        align-self: flex-start;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 1.3rem;
+        line-height: 1rem;
+        width: 16rem;
+        color: #FFF;  
+        margin-bottom: 2rem;
+    }
+
+    a {
+        align-self: flex-start;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1rem;
+        width: 16rem;
+        color: #FFF;  
+    }
+
+    button {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 `
