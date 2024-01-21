@@ -13,12 +13,15 @@ const App = () => {
 
 
   function addNewOrder() {
-    setOrders([
-      ...orders, { id: Math.random(), foodOrder: inputOrder.current.value, name: inputName.current.value }])
+    setOrders([...orders, { id: Math.random(), foodOrder: inputOrder.current.value, name: inputName.current.value }])
+
+    // Limpar os inputs após adicionar o pedido
+    inputOrder.current.value = '';
+    inputName.current.value = '';
   }
 
   function deleterOrder(orderId) {
-    const newOrders = orders.filter( order => order.id !== orderId)
+    const newOrders = orders.filter(order => order.id !== orderId)
 
     setOrders(newOrders)
   }

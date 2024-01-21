@@ -106,8 +106,7 @@ export const Order = styled.li`
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 21rem;
     padding: 1rem;
-    /*height: 3.5rem;*/
-
+    height: auto;
     border: none;
     outline: none;
 
@@ -116,10 +115,10 @@ export const Order = styled.li`
         font-style: normal;
         font-weight: 100;
         font-size: 1.3rem;
-        line-height: 1rem;
-        width: 16rem;
+        line-height: 1.5rem;
+        width: 90%;
         color: #FFF;  
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     a {
@@ -128,7 +127,8 @@ export const Order = styled.li`
         font-weight: 400;
         font-size: 1rem;
         line-height: 1rem;
-        width: 16rem;
+        margin-bottom: 1.5rem;
+        width: 90%;
         color: #FFF;  
     }
 
@@ -137,5 +137,7 @@ export const Order = styled.li`
         background: none;
         border: none;
         cursor: pointer;
+        margin-top: -4rem;
+        margin-bottom: 1rem;
     }
 `
