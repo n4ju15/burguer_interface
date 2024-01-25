@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import axios from 'axios'
 
 
 import Logo from './assets/logo.svg'
@@ -12,8 +13,12 @@ const App = () => {
   const inputName = useRef()
 
 
-  function addNewOrder() {
-    setOrders([...orders, { id: Math.random(), foodOrder: inputOrder.current.value, name: inputName.current.value }])
+  async function addNewOrder() {
+    const data = await axios.post("http://localhost:3001/orders", { order: inputOrder.current.value, name: inputName.current.value })
+
+    console.log(data)
+
+    //setOrders([...orders, { id: Math.random(), foodOrder: inputOrder.current.value, name: inputName.current.value }])
 
     // Limpar os inputs após adicionar o pedido
     inputOrder.current.value = '';
