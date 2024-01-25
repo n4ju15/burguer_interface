@@ -1,27 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 
 import OrderLogo from '../../assets/order.svg'
 import Trash from '../../assets/trash.svg'
 
-import { Container, Image, ContainerItems, H1, InputLabel, Input, Button, Order } from './styles'
+import { Container, Image, ContainerItems, H1, Button, Order } from './styles'
 
 const Orders = () => {
   const [orders, setOrders] = useState([])
-  const inputOrder = useRef()
-  const inputName = useRef()
 
-
-  async function addNewOrder() {
-    const { data: newOrder } = await axios.post("http://localhost:3001/orders", { order: inputOrder.current.value, clientName: inputName.current.value })
-
-    setOrders([...orders, newOrder])
-
-    // Limpar os inputs após adicionar o pedido
-    inputOrder.current.value = '';
-    inputName.current.value = '';
-  }
+  const history = useHistory()
 
   useEffect(() => {
     async function fetchOrders() {
@@ -38,6 +28,10 @@ const Orders = () => {
     const newOrders = orders.filter(order => order.id !== orderId)
 
     setOrders(newOrders)
+  }
+
+  function goBackPage() {
+    history.push('/')
   }
 
   return (
@@ -59,7 +53,7 @@ const Orders = () => {
           }
         </ul>
 
-        <Button onClick={addNewOrder}>
+        <Button onClick={goBackPage}>
           Voltar
         </Button>
 

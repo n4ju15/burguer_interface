@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -8,6 +9,8 @@ import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from 
 
 const Home = () => {
   const [orders, setOrders] = useState([])
+  const history = useHistory()
+
   const inputOrder = useRef()
   const inputName = useRef()
 
@@ -20,6 +23,9 @@ const Home = () => {
     // Limpar os inputs após adicionar o pedido
     inputOrder.current.value = '';
     inputName.current.value = '';
+
+    // Navegar para a próxima tela
+    history.push('/orders')
   }
 
   return (
