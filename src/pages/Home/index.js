@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react'
 import { useHistory } from 'react-router-dom'
-import axios from 'axios'
 
+import axios from 'axios'
 
 import Logo from '../../assets/logo.svg'
 
-import { Container, Image, ContainerItems, H1, InputLabel, Input, Button } from './styles'
+import H1 from '../../components/Title'
+
+import { Container, Image, ContainerItems, InputLabel, Input, Button } from './styles'
 
 const Home = () => {
   const [orders, setOrders] = useState([])

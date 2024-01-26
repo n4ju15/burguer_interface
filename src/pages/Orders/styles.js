@@ -23,17 +23,6 @@ export const ContainerItems = styled.div`
     /*height: 100vh;*/
 `
 
-export const H1 = styled.h1`
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 5rem;
-`
-
 export const InputLabel = styled.p`
     color: #EEE;
     font-family: Roboto;

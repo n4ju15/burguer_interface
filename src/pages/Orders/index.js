@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
+
 import axios from 'axios'
 
 
 import OrderLogo from '../../assets/order.svg'
 import Trash from '../../assets/trash.svg'
 
-import { Container, Image, ContainerItems, H1, Button, Order } from './styles'
+import H1 from '../../components/Title'
+
+import { Container, Image, ContainerItems, Button, Order } from './styles'
 
 const Orders = () => {
   const [orders, setOrders] = useState([])

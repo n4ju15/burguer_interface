@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Home from './containers/Home'
-import Orders from './containers/Orders'
+import Home from './pages/Home'
+import Orders from './pages/Orders'
 
 function Routes() {
 
