@@ -83,7 +83,7 @@ export const Button = styled.button`
 
 export const Order = styled.li`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     
@@ -93,39 +93,29 @@ export const Order = styled.li`
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 21rem;
-    padding: 1rem;
+    padding: 0.5rem;
     height: auto;
     border: none;
     outline: none;
 
-    p {
-        align-self: flex-start;
-        font-style: normal;
-        font-weight: 100;
-        font-size: 1.3rem;
-        line-height: 1.5rem;
-        width: 90%;
-        color: #FFF;  
-        margin-bottom: 1rem;
+    div {
+        display: flex;
+        flex-direction: column;
     }
 
-    a {
-        align-self: flex-start;
+    p {
+        align-self: self-start; //Testar
         font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1rem;
-        margin-bottom: 1.5rem;
-        width: 90%;
+        font-weight: ${({ fontWeight400 }) => fontWeight400 ? '400' : '100'};
+        font-size: 1.3rem;
+        line-height: 3rem;
+        width: 100%;
         color: #FFF;  
     }
 
     button {
-        align-self: flex-end;
         background: none;
         border: none;
         cursor: pointer;
-        margin-top: -4rem;
-        margin-bottom: 1rem;
     }
 `

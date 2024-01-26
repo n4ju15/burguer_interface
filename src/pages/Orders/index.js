@@ -47,8 +47,10 @@ const Orders = () => {
         <ul>
           {orders.map((orderItem) => (
             <Order key={orderItem.id}>
-              <p>{orderItem.order}</p>
-              <a>{orderItem.clientName}</a>
+              <div>
+                <p>{orderItem.order}</p>
+                <p fontWeight400={true} >{orderItem.clientName}</p>
+              </div>
               <button onClick={() => deleterOrder(orderItem.id)}>
                 <img src={Trash} alt='trash' />
               </button>
