@@ -12,10 +12,10 @@ Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu na
 
 Acesse o deploy da aplicação online: [https://burguerapp.netlify.app](https://burguerapp.netlify.app)
 
-### Burguer App
+## Burguer App
 
 <div align="center">
-<img src="../burguer_interface/src/assets/burguer.gif">
+<img src="src/assets/burguer.gif">
 </div>
 
 ## Tecnologias
