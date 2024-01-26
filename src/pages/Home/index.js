@@ -19,7 +19,7 @@ const Home = () => {
 
 
   async function addNewOrder() {
-    const { data: newOrder } = await axios.post("http://localhost:3001/orders", { order: inputOrder.current.value, clientName: inputName.current.value })
+    const { data: newOrder } = await axios.post("https://burguer-backend.vercel.app/orders", { order: inputOrder.current.value, clientName: inputName.current.value })
 
     setOrders([...orders, newOrder])
 
