@@ -8,8 +8,9 @@ import OrderLogo from '../../assets/order.svg'
 import Trash from '../../assets/trash.svg'
 
 import H1 from '../../components/Title'
+import Button from '../../components/Button'
 
-import { Container, Image, ContainerItems, Button, Order } from './styles'
+import { Container, Image, ContainerItems, Order } from './styles'
 
 const Orders = () => {
   const [orders, setOrders] = useState([])
@@ -56,7 +57,7 @@ const Orders = () => {
           }
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           Voltar
         </Button>
 

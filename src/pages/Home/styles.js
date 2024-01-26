@@ -51,33 +51,3 @@ export const Input = styled.input`
     font-weight: 400;
     line-height: 1rem;
 `
-
-export const Button = styled.button`
-    width: 21rem;
-    height: 4rem;
-    margin-top: 2rem;
-
-    background: #D93856;
-    border-radius: 14px;
-    border: ${props => props.isBack ? 'border: 1px solid #FFF;' : 'none'};
-
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.75rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.3rem;
-
-    &:hover {
-        opacity: 0.8;
-    }
-
-    &:active {
-        opacity: 0.6;
-    }
-`

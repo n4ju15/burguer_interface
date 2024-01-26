@@ -58,8 +58,7 @@ export const Button = styled.button`
     margin-top: 2rem;
 
     background: #D93856;
-    border-radius: 14px;
-    border: ${props => props.isBack ? 'border: 1px solid #FFF;' : 'none'};
+    border: none;
 
     color: #FFF;
     font-family: Roboto;
